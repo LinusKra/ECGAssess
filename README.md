@@ -1,4 +1,4 @@
-# ECGAssess
+# ECGAssess: A Python-Based Toolbox For ECG Lead Signal Quality Assessment
 
 The program is available twice. To get the results of the algorithms, the main file must be used. 
 In this file, the algorithm automatically compares the results of the algorithms with the 
