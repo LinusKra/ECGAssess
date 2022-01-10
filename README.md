@@ -6,7 +6,7 @@ The executable program should work on all operating systems and does not require
 
 ### Prerequisites - Data
 
-The data entered in program must have the same formatting as the data in the folder "set-a". That means:
+The data entered in program must have the same formatting as the data in the folder "set-a". Specifically this means:
 
 * The document must be in .txt format.
 * There is no heading or any other written words in the document.
