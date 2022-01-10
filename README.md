@@ -34,4 +34,4 @@ After starting the program, a window is opened, which is built up as shown in th
 2. Next, the "Load Data" button must be pressed. A new window opens where a file must be selected. This file must contain the correct leads as set in step 1 and must meet the data requirements described above.
 3. The last thing to do is to press the "Process" button. After that, the results of the analysis will be visible in the table at the bottom right.
 
-After a file is loaded into the progeram, the plot is visible in the center of the window. The visible lead can be adjusted with the slider at the top of the window.
+After a file is loaded into the program, the plot is visible in the center of the window. The visible lead can be adjusted with the slider at the top of the window.
