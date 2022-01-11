@@ -1,4 +1,4 @@
-# ECGAssess Executable
+# ECGAssess: A Python-based Toolbox to Assess ECG Leads
 ![Screenshot](ECGAssessGUI.PNG)
 
 ### Prerequisites - Program
