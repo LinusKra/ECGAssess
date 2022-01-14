@@ -1,6 +1,8 @@
 # ECGAssess: A Python-based Toolbox to Assess ECG Leads
 ![Screenshot](ECGAssessGUI.PNG)
 
+## Executable File
+
 ### Prerequisites - Program
 The executable program should work on all operating systems and does not require any installation or additional software.
 
@@ -32,6 +34,22 @@ After starting the program, a window is opened, which is built up as shown in th
 
 1. The first thing to be done is to set how many leads the ECG to be evaluated has. The number can be set simply by clicking the arrow buttons. The default value is 12 and it can be selected from the range of 1 to 12 leads.
 2. Next, the "Load Data" button must be pressed. A new window opens where a file must be selected. This file must contain the correct leads as set in step 1 and must meet the data requirements described above.
-3. The last thing to do is to press the "Process" button. After that, the results of the analysis will be visible in the table at the bottom right.
+4. The last thing to do is to press the "Process" button. After that, the results of the analysis will be visible in the table at the bottom right.
 
 After a file is loaded into the program, the plot is visible in the center of the window. The visible lead can be adjusted with the slider at the top of the window.
+
+## Annotation
+
+In the annotation folder are all the data with which the classification of the signals was made. The classification of the signals was made with the plots in the powerpoint files. The powerpoint files are sorted by data set (testing / training) and by groups (I / II).  The result of the annotation can be seen in the Excel files.
+
+## Code
+
+In the code folder are the source codes of the executable program. This code is divided into a GUI file and an Algorithms file. The GUI file refers to the Algorithm file and therefore only the Gui file must be executed.
+
+## Lists
+
+There is a separate readme file in the Lists folder.
+
+## Set-a
+
+In this dataset are all signals provided by the Physionet/Computing in Cardiology Challenge 2011. The development of the algorithms was made exclusively with these data. All 998 ECG recordings consist of 12 leads, have a length of 10 seconds and a measurement frequency of 500 Hz.
