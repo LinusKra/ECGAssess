@@ -12,12 +12,12 @@ The executable program should work on all operating systems and does not require
 
 The data entered in program must have the same formatting as the data in the folder "set-a". Specifically this means:
 
-* The document must be in .txt format.
+* The document must be in .txt, .csv, .xls, .xlsx or wfdb format.
 * There is no heading or any other written words in the document.
-* Each measurement is written on a new line. The recordings have a length of 10 seconds and have a frequency of 500 measurements per second.
+* Each measurement is written on a new line.
 * In the first column is the numeration of the measurements.
 * The other columns are the measured values of the ECG machine in microvolts.
-* The individual columns are separated from each other by a comma.
+* The individual columns are separated from each other according to the data type.
 
 ***Example (with 12 leads):***
 >**0**,0,4,4,-2,4,-2,0,-4,-16,-16,-16,-12\
@@ -34,7 +34,7 @@ The data entered in program must have the same formatting as the data in the fol
 
 After starting the program, a window is opened, which is built up as shown in the image above. To use the program, simply follow the numbers:
 
-1. The first thing to be done is to set how many leads the ECG to be evaluated has. The number can be set simply by clicking the arrow buttons. The default value is 12 and it can be selected from the range of 1 to 12 leads.
+1. The first thing to be done is to set how many leads the ECG to be evaluated has. The number can be set simply by clicking the arrow buttons. The default value is 12 and it can be selected from the range of 1 to 12 leads. Then the frequency, in Hz, at which the measurements were made must be entered. The default sampling frequency is 500 Hz.
 2. Next, the "Load Data" button must be pressed. A new window opens where a file must be selected. This file must contain the correct leads as set in step 1 and must meet the data requirements described above.
 4. The last thing to do is to press the "Process" button. After that, the results of the analysis will be visible in the table at the bottom right.
 
