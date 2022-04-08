@@ -2,6 +2,7 @@ import numpy as np
 import scipy.signal
 from ecgdetectors import Detectors
 import scipy.stats
+import neurokit2 as nk
 
 detectors = Detectors(500)
 
@@ -73,8 +74,15 @@ def signal_to_noise_ratio_check(data, total_leads):
     return res
 
 
-def processing(ECG, total_leads):
-    filt_ECG = [ECG[0]]
+def processing(ECG, total_leads, temp_freq):
+    resampled_ECG = []
+    if temp_freq != 500:
+        for n in range(0, total_leads + 1):
+            resampled_ECG.append(nk.signal_resample(ECG[n], sampling_rate=int(temp_freq), desired_sampling_rate=500, method="numpy"))
+    else:
+        resampled_ECG = ECG
+
+    filt_ECG = [resampled_ECG[0]]
     for lead in range(1, total_leads + 1):
         x = high_frequency_noise_filter(ECG[lead]) - baseline_filter(ECG[lead])
         filt_ECG.append(x)
