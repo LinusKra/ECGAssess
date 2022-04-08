@@ -1,5 +1,5 @@
 # ECGAssess: A Python-based Toolbox to Assess ECG Leads
-![Screenshot](ECGAssessGUI.PNG)
+![Screenshot](GUI_ECG_Assess.PNG)
 
 ## Executable File
 
