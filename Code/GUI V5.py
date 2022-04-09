@@ -9,6 +9,8 @@ from matplotlib.ticker import AutoMinorLocator
 import pathlib
 import pandas as pd
 
+
+
 class Table:
     def __init__(self, root):
         Table = tk.Frame(GUI_window)
@@ -149,7 +151,7 @@ lst = [["Lead", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
        ["Stationary Signal Check", "", "", "", "", "", "", "", "", "", "", "", ""],
        ["Heart Rate Check", "", "", "", "", "", "", "", "", "", "", "", ""],
        ["SNR Check", "", "", "", "", "", "", "", "", "", "", "", ""],
-       ["Combination", "", "", "", "", "", "", "", "", "", "", "", ""]]
+       ["Overall Result", "", "", "", "", "", "", "", "", "", "", "", ""]]
 
 total_rows = len(lst)
 total_columns = len(lst[0])
@@ -157,5 +159,6 @@ t = Table(GUI_window)
 
 process_button = tk.Button(GUI_window, text="3 - Process", command=execute)
 process_button.place(x=0, y=485, width=240, height=55)
+
 
 GUI_window.mainloop()

@@ -3,6 +3,9 @@ import scipy.signal
 from ecgdetectors import Detectors
 import scipy.stats
 import neurokit2 as nk
+from bigO import BigO
+from bigO import algorithm
+import time
 
 detectors = Detectors(500)
 
@@ -14,7 +17,7 @@ min_loss_stopband = 20      # dB
 SNR_threshold = 0.5
 signal_freq_band = [2, 40]      # from .. to .. in Hz
 heart_rate_limits = [24, 300]       # from ... to ... in beats per minute
-time = 10       # seconds
+t = 10       # seconds
 window_length = 100      # measurements
 # endregion
 
@@ -50,7 +53,7 @@ def heart_rate_check(data, total_leads):
     res = []
     for lead in range(1, total_leads + 1):
         beats = detectors.pan_tompkins_detector(data[lead])
-        if len(beats) > ((heart_rate_limits[1]*time)/60) or len(beats) < ((heart_rate_limits[0]*time)/60):
+        if len(beats) > ((heart_rate_limits[1]*t)/60) or len(beats) < ((heart_rate_limits[0]*t)/60):
             res.append(1)
         else:
             res.append(0)
@@ -74,7 +77,12 @@ def signal_to_noise_ratio_check(data, total_leads):
     return res
 
 
+
+
+
+
 def processing(ECG, total_leads, temp_freq):
+    second = time.time()
     resampled_ECG = []
     if temp_freq != 500:
         for n in range(0, total_leads + 1):
@@ -115,4 +123,7 @@ def processing(ECG, total_leads, temp_freq):
     # print(tabulate(SQM, headers=lead_name, showindex=SQM_rows))
     # print(LQI)
     res.append(combination)
+    print(time.time()-second)
     return res
+
+
